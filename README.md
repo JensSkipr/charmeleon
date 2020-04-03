@@ -68,7 +68,7 @@ poweroff
 
 ## 2. Setup system
 
-```
+```bash
 # Connect to internet
 systemctl start NetworkManager
 systemctl enable NetworkManager
@@ -102,11 +102,15 @@ mkdir -p ~/.config/sway
 cp ./config/sway ~/.config/sway/config
 
 # Install YAY
+# https://github.com/Jguer/yay
 sudo pacman -S fakeroot
-# TODO: Install YAY
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
 
 # Install Greetd
-# See https://wiki.archlinux.org/index.php/Greetd
+# https://wiki.archlinux.org/index.php/Greetd
+yay -S greetd-git greetd-wlgreet-git
 ```
 
 ## 3. Setup applications
