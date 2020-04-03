@@ -123,7 +123,10 @@ yay -S greetd-git greetd-wlgreet-git
 ## 3. Setup applications
 ```bash
 # Install applications
-sudo pacman -S firefox keepassxc nextcloud-client
+sudo pacman -S firefox keepassxc nextcloud-client libgnome-keyring gnome-keyring
+
+# Follow PAM instructions to unlock the GNOME Keyring automatically at login
+# https://wiki.archlinux.org/index.php/GNOME/Keyring#Console_login
 ```
 
 # Thanks to 
