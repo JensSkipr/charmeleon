@@ -93,6 +93,9 @@ exit
 # Disable root
 sudo passwd -ld root
 
+# Install fonts
+sudo pacman -S ttf-dejavu ttf-font-awesome
+
 # Install Sway
 sudo pacman -S sway dmenu swaylock swayidle swaybg alacritty
 sudo pacman -S xorg-server-xwayland qt5-wayland
@@ -118,3 +121,6 @@ yay -S greetd-git greetd-wlgreet-git
 # Install applications
 sudo pacman -S firefox keepassxc nextcloud-client
 ```
+
+# Thanks to 
+- Robinhuett for sharing his [awesome config files](https://github.com/Robinhuett/dotfiles)
