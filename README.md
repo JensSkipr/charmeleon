@@ -76,14 +76,18 @@ systemctl enable NetworkManager
 # Update repos and software
 pacman -Syu
 
+# Install audio
+pacman -S alsa-utils pulseaudio pulseaudio-alsa playerctl
+
 # Install basic software
-pacman -S git openssh
+pacman -S git openssh acpilight
 
 # Add new admin user
 USERNAME=<username>
 pacman -S sudo
 addgroup sudo
 useradd -m -G sudo -s /bin/bash ${USERNAME}
+useradd -m -G video -s /bin/bash ${USERNAME} # For backlight control
 passwd ${USERNAME}
 EDITOR=vim visudo # Uncomment line "%sudo ALL=(ALL) ALL"
 exit

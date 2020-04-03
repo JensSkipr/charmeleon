@@ -12,7 +12,7 @@ set $right i
 
 # Default apps
 set $term alacritty
-set $menu dmenu_path | wofi -di | xargs swaymsg exec --
+set $menu wofi --show run --insensitive --matching=fuzzy --term alacritty | xargs swaymsg exec --
 
 # Workspaces
 set $ws1 "1. 龜"
@@ -90,6 +90,24 @@ assign [app_id="desktopclient.nextcloud.com.nextcloud"] $ws10
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+#
+# Multimedia:
+#
+    # Pulse Audio controls
+    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5% #increase sound volume
+    bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5% #decrease sound volume
+    bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
+
+    # Sreen brightness controls
+    bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+    bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
+    # Media player controls
+    bindsym XF86AudioPlay exec playerctl play
+    bindsym XF86AudioPause exec playerctl pause
+    bindsym XF86AudioNext exec playerctl next
+    bindsym XF86AudioPrev exec playerctl previous
+
 #
 # Moving around:
 #
