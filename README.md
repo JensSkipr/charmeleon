@@ -114,17 +114,17 @@ systemctl start --user ssh-agent
 # Install fonts
 sudo pacman -S ttf-dejavu ttf-font-awesome
 
-# Install Sway and symlink config
-sudo pacman -S sway swaylock swayidle swaybg alacritty wofi slurp grim
-sudo pacman -S xorg-server-xwayland qt5-wayland
-ln -s "$(pwd)/home/.config/sway" "${HOME}/.config/sway"
-
 # Install YAY
 # https://github.com/Jguer/yay
 sudo pacman -S fakeroot
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
+
+# Install Sway and symlink config
+sudo pacman -S sway swaylock swayidle swaybg alacritty wofi slurp grim
+sudo pacman -S xorg-server-xwayland qt5-wayland
+yay -S redshift-wlr-gamma-control-git
 
 # Install Greetd
 # https://wiki.archlinux.org/index.php/Greetd
