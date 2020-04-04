@@ -134,7 +134,8 @@ yay -S greetd-git greetd-wlgreet-git
 ## 3. Setup applications
 ```bash
 # Install applications
-sudo pacman -S firefox thunar keepassxc nextcloud-client libgnome-keyring gnome-keyring
+sudo pacman -S firefox thunar keepassxc nextcloud-client libgnome-keyring gnome-keyring \
+               gimp
 yay -S mirage
 
 # Follow PAM instructions to unlock the GNOME Keyring automatically at login
