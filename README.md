@@ -97,16 +97,16 @@ exit
 # Disable root
 sudo passwd -ld root
 
+# Create base directories
+mkdir -p ~/.config
+
 # Install fonts
 sudo pacman -S ttf-dejavu ttf-font-awesome
 
-# Install Sway
+# Install Sway and symlink config
 sudo pacman -S sway dmenu swaylock swayidle swaybg alacritty
 sudo pacman -S xorg-server-xwayland qt5-wayland
-
-# TODO: Copy Sway config
-mkdir -p ~/.config/sway
-cp ./config/sway ~/.config/sway/config
+ln -s "$(pwd)/home/.config/sway" "${HOME}/.config/sway"
 
 # Install YAY
 # https://github.com/Jguer/yay
