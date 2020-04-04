@@ -123,10 +123,14 @@ yay -S greetd-git greetd-wlgreet-git
 ## 3. Setup applications
 ```bash
 # Install applications
-sudo pacman -S firefox keepassxc nextcloud-client libgnome-keyring gnome-keyring
+sudo pacman -S firefox thunar keepassxc nextcloud-client libgnome-keyring gnome-keyring
 
 # Follow PAM instructions to unlock the GNOME Keyring automatically at login
 # https://wiki.archlinux.org/index.php/GNOME/Keyring#Console_login
+
+# Install Wofi and symlink config
+sudo pacman -S wofi
+ln -s "$(pwd)/home/.config/wofi" "${HOME}/.config/wofi"
 ```
 
 # Thanks to 

@@ -12,7 +12,7 @@ set $right i
 
 # Default apps
 set $term alacritty
-set $menu wofi --show run --insensitive --matching=fuzzy --term alacritty | xargs swaymsg exec --
+set $menu wofi -c ~/.config/wofi/config.env | xargs swaymsg exec --
 
 # Workspaces
 set $ws1 "1. 龜"
