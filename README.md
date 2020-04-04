@@ -115,7 +115,7 @@ systemctl start --user ssh-agent
 sudo pacman -S ttf-dejavu ttf-font-awesome
 
 # Install Sway and symlink config
-sudo pacman -S sway dmenu swaylock swayidle swaybg alacritty
+sudo pacman -S sway swaylock swayidle swaybg alacritty wofi slurp grim
 sudo pacman -S xorg-server-xwayland qt5-wayland
 ln -s "$(pwd)/home/.config/sway" "${HOME}/.config/sway"
 
@@ -135,13 +135,10 @@ yay -S greetd-git greetd-wlgreet-git
 ```bash
 # Install applications
 sudo pacman -S firefox thunar keepassxc nextcloud-client libgnome-keyring gnome-keyring
+yay -S mirage
 
 # Follow PAM instructions to unlock the GNOME Keyring automatically at login
 # https://wiki.archlinux.org/index.php/GNOME/Keyring#Console_login
-
-# Install Wofi and symlink config
-sudo pacman -S wofi
-ln -s "$(pwd)/home/.config/wofi" "${HOME}/.config/wofi"
 
 # Install Python
 sudo pacman -S python python-pip
