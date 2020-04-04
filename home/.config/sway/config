@@ -73,6 +73,10 @@ assign [instance="code-oss"] $ws3
 assign [app_id="org.keepassxc.KeePassXC"] $ws10
 assign [app_id="desktopclient.nextcloud.com.nextcloud"] $ws10
 
+# Program tweaks
+for_window [app_id="wofi"] border none
+for_window [app_id="org.keepassxc.KeePassXC" title=".*KeePassXC-Browser.*"] floating enable
+
 ### Key bindings
 #
 # Basics:
