@@ -107,6 +107,10 @@ tee -a ~/.bashrc <<EOF
 export TERM=xterm-256color
 EOF
 
+# Enable and start SSH Agent
+systemctl enable --user ssh-agent
+systemctl start --user ssh-agent
+
 # Install fonts
 sudo pacman -S ttf-dejavu ttf-font-awesome
 
