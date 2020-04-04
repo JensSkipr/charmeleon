@@ -100,6 +100,13 @@ sudo passwd -ld root
 # Create base directories
 mkdir -p ~/.config
 
+# Set custom bashrc
+tee -a ~/.bashrc <<EOF
+
+# Custom stuff
+export TERM=xterm-256color
+EOF
+
 # Install fonts
 sudo pacman -S ttf-dejavu ttf-font-awesome
 
