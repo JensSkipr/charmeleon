@@ -142,6 +142,15 @@ sudo pacman -S firefox thunar keepassxc nextcloud-client libgnome-keyring gnome-
 # Install Wofi and symlink config
 sudo pacman -S wofi
 ln -s "$(pwd)/home/.config/wofi" "${HOME}/.config/wofi"
+
+# Install Python
+sudo pacman -S python python-pip
+
+# Install Docker
+sudo pacman -S docker docker-compose
+sudo usermod -a -G docker ${USER}
+sudo systemctl start docker
+sudo systemctl enable docker
 ```
 
 # Thanks to 
